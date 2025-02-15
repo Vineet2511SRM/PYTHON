@@ -1,0 +1,11 @@
+# Sample list of words
+words = ['apple', 'banana', 'kiwi', 'cherry', 'pineapple']
+
+# Get the length of the list
+list_length = len(words)
+
+# Find words longer than the length of the list
+long_words = [word for word in words if len(word) > list_length]
+
+# Output the list of long words
+print("Words longer than the length of the list:", long_words)

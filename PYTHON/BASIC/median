@@ -1,0 +1,14 @@
+number = []
+n = int(input())
+for i in range(n):
+    num = float(input())
+    number.append(num)
+
+number.sort()
+
+if n % 2 == 1:
+    median = number[n // 2]
+else:
+    median = (number[n // 2 - 1] + number[n // 2]) / 2
+
+print(median)
