@@ -65,6 +65,6 @@ numerical_data = df[['Age', 'Tenure', 'MonthlyCharges', 'TotalCharges']].values 
 correlation_matrix = np.corrcoef(numerical_data.T)  # Transpose for correlation calculation
 print("\nCorrelation Matrix (NumPy):\n", correlation_matrix)
 
-# Corresponding column names
+# Corresponding column names 
 columns = ['Age', 'Tenure', 'MonthlyCharges', 'TotalCharges']
 print("\nColumns for Correlation Matrix:", columns)
