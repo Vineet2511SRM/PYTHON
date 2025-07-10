@@ -1,4 +1,4 @@
-# Basic Python program with exception handling
+# Basic Python program with exception handling description 
 
 try:
     # Taking two numbers as input
