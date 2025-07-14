@@ -1,16 +1,28 @@
-# Set a secret number (the number your friend needs to guess)
-secret_number = 42
+import random
 
-# Start a while loop to repeatedly ask for guesses
+# Set the secret number
+secret_number = 42  # You can use random.randint(1, 100) for variation
+
+print("Welcome to the Guessing Game!")
+print("You need to guess the secret number to unlock the class notes.")
+print("Hint: It's between 1 and 100.")
+
+attempts = 0  # Count the number of tries
+
 while True:
-    # Ask the user to guess a number
-    guess = int(input("Guess the number to get the class notes: "))
-    
-    # Check if the guess is correct
-    if guess == secret_number:
-        print("Congratulations! You've guessed the correct number. Here's the class notes!")
-        break  # Exit the loop since the correct guess was made
-    elif guess < secret_number:
-        print("Too low! Try again.")
-    else:
-        print("Too high! Try again.")
+    try:
+        guess = int(input("Enter your guess: "))
+        attempts += 1
+
+        if guess == secret_number:
+            print(f"Correct! You guessed it in {attempts} attempts.")
+            print("Here's the class notes. Use them wisely!")
+            break
+        elif abs(guess - secret_number) <= 3:
+            print("Very close! You're just a few numbers away.")
+        elif guess < secret_number:
+            print("Too low. Try again.")
+        else:
+            print("Too high. Try again.")
+    except ValueError:
+        print("Invalid input. Please enter a valid number.")
