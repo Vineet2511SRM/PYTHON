@@ -7,7 +7,7 @@ print("Welcome to the Guessing Game!")
 print("You need to guess the secret number to unlock the class notes.")
 print("Hint: It's between 1 and 100.")
 
-attempts = 0  # Count the number of tries
+attempts = 0  # Counting the number of tries
 
 while True:
     try:
