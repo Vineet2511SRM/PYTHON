@@ -164,7 +164,7 @@ class Game:
             running = self.handle_events()
             self.update()
             self.draw()
-            self.clock.tick(10)  # 10 FPS for classic snake feel
+            self.clock.tick(10)  # 10 FPS for a feel of classic snake
         
         pygame.quit()
         sys.exit()
